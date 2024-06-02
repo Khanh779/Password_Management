@@ -1,12 +1,4 @@
 ﻿using System;
-using System.CodeDom;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace Generate_Password
@@ -103,7 +95,7 @@ namespace Generate_Password
         {
             if (e.Button == MouseButtons.Left)
             {
-                if(textBox1.Text!="" && textBox2.Text != "")
+                if (textBox1.Text != "" && textBox2.Text != "")
                 {
                     var createUserExist = PasswordManager.Instance.AddUser(textBox1.Text, textBox2.Text);
                     if (createUserExist == true)

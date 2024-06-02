@@ -1,13 +1,5 @@
 ﻿
 using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Security.Cryptography;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace Generate_Password
@@ -145,12 +137,12 @@ namespace Generate_Password
 
         private void linkLabel1_MouseClick(object sender, MouseEventArgs e)
         {
-            if(e.Button== MouseButtons.Left)
+            if (e.Button == MouseButtons.Left)
             {
                 Form1 form1 = new Form1();
                 form1.StartPosition = FormStartPosition.CenterScreen;
                 form1.Show();
-            }    
+            }
         }
     }
 }

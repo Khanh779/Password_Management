@@ -98,7 +98,7 @@
             this.LB_Welcome.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
             this.LB_Welcome.Location = new System.Drawing.Point(24, 10);
             this.LB_Welcome.Name = "LB_Welcome";
-            this.LB_Welcome.Size = new System.Drawing.Size(225, 38);
+            this.LB_Welcome.Size = new System.Drawing.Size(225, 33);
             this.LB_Welcome.TabIndex = 5;
             this.LB_Welcome.Text = "Welcome!";
             this.LB_Welcome.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;

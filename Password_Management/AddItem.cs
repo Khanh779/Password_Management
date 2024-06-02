@@ -1,14 +1,6 @@
 ﻿using Generate_Password.Enums;
 using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Diagnostics;
 using System.Drawing;
-using System.Linq;
-using System.Security.Cryptography;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace Generate_Password
@@ -24,7 +16,7 @@ namespace Generate_Password
 
         private void textBox2_TextChanged(object sender, EventArgs e)
         {
-            var a= PaswordUtil.EvaluatePassword(textBox2.Text); 
+            var a = PaswordUtil.EvaluatePassword(textBox2.Text);
             label5.Text = $"Pass length: {textBox2.Text.Length}, secure level: {CorverEnumToString(a)}";
 
             switch (a)
@@ -65,7 +57,7 @@ namespace Generate_Password
 
         private void button1_MouseClick(object sender, MouseEventArgs e)
         {
-            if(e.Button == MouseButtons.Left)
+            if (e.Button == MouseButtons.Left)
             {
                 if (string.IsNullOrEmpty(textBox1.Text) || string.IsNullOrEmpty(textBox2.Text) || string.IsNullOrEmpty(textBox4.Text))
                 {
@@ -89,20 +81,20 @@ namespace Generate_Password
                         });
                     }
                 });
-              
+
             }
-         
-            DialogResult= DialogResult.OK;
+
+            DialogResult = DialogResult.OK;
 
         }
 
         private void linkLabel1_MouseClick(object sender, MouseEventArgs e)
         {
-            if(e.Button== MouseButtons.Left)
+            if (e.Button == MouseButtons.Left)
             {
                 Form1 form1 = new Form1();
                 form1.ShowDialog();
-            }    
+            }
         }
     }
 }
