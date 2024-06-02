@@ -88,7 +88,8 @@
             // LB_Welcome
             // 
             this.LB_Welcome.AutoEllipsis = true;
-            this.LB_Welcome.Font = new System.Drawing.Font("Segoe UI", 12F);
+            this.LB_Welcome.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.LB_Welcome.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
             this.LB_Welcome.Location = new System.Drawing.Point(35, 15);
             this.LB_Welcome.Name = "LB_Welcome";
             this.LB_Welcome.Size = new System.Drawing.Size(225, 38);
@@ -109,7 +110,7 @@
             // checkBox1
             // 
             this.checkBox1.AutoSize = true;
-            this.checkBox1.Location = new System.Drawing.Point(24, 179);
+            this.checkBox1.Location = new System.Drawing.Point(24, 173);
             this.checkBox1.Name = "checkBox1";
             this.checkBox1.Size = new System.Drawing.Size(115, 21);
             this.checkBox1.TabIndex = 7;
