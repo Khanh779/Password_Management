@@ -1,0 +1,7 @@
+﻿################################################################################
+# This .gitignore file was automatically created by Microsoft(R) Visual Studio.
+################################################################################
+
+/.vs/Generate_Password/v17
+/.vs/Generate_Password/FileContentIndex/a84b5262-3af9-49bc-a943-3275457c1711.vsidx
+/.vs/Password_Management
