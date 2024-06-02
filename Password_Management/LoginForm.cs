@@ -103,12 +103,19 @@ namespace Generate_Password
         {
             if (e.Button == MouseButtons.Left)
             {
-                var createUserExist = PasswordManager.Instance.AddUser(textBox1.Text, textBox2.Text);
-                if (createUserExist == true)
-                    MessageBox.Show("Add new user success!\nPlease click login");
+                if(textBox1.Text!="" && textBox2.Text != "")
+                {
+                    var createUserExist = PasswordManager.Instance.AddUser(textBox1.Text, textBox2.Text);
+                    if (createUserExist == true)
+                        MessageBox.Show("Add new user success!\nPlease click login");
+                    else
+                    {
+                        MessageBox.Show("User name is exist!");
+                    }
+                }
                 else
                 {
-                    MessageBox.Show("User name is exist!");
+                    MessageBox.Show("Please enter user name and password!");
                 }
             }
         }

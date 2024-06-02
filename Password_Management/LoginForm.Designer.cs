@@ -42,8 +42,9 @@
             // 
             // label1
             // 
+            this.label1.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(21, 59);
+            this.label1.Location = new System.Drawing.Point(10, 54);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(77, 17);
             this.label1.TabIndex = 0;
@@ -51,16 +52,18 @@
             // 
             // textBox1
             // 
+            this.textBox1.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.textBox1.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.SuggestAppend;
             this.textBox1.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.CustomSource;
-            this.textBox1.Location = new System.Drawing.Point(24, 81);
+            this.textBox1.Location = new System.Drawing.Point(13, 76);
             this.textBox1.Name = "textBox1";
             this.textBox1.Size = new System.Drawing.Size(248, 25);
             this.textBox1.TabIndex = 1;
             // 
             // textBox2
             // 
-            this.textBox2.Location = new System.Drawing.Point(24, 140);
+            this.textBox2.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.textBox2.Location = new System.Drawing.Point(13, 135);
             this.textBox2.Name = "textBox2";
             this.textBox2.Size = new System.Drawing.Size(248, 25);
             this.textBox2.TabIndex = 3;
@@ -68,8 +71,9 @@
             // 
             // label2
             // 
+            this.label2.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(21, 118);
+            this.label2.Location = new System.Drawing.Point(10, 113);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(67, 17);
             this.label2.TabIndex = 2;
@@ -77,7 +81,8 @@
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(116, 206);
+            this.button1.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.button1.Location = new System.Drawing.Point(105, 201);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(75, 26);
             this.button1.TabIndex = 4;
@@ -87,10 +92,11 @@
             // 
             // LB_Welcome
             // 
+            this.LB_Welcome.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.LB_Welcome.AutoEllipsis = true;
             this.LB_Welcome.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.LB_Welcome.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
-            this.LB_Welcome.Location = new System.Drawing.Point(35, 15);
+            this.LB_Welcome.Location = new System.Drawing.Point(24, 10);
             this.LB_Welcome.Name = "LB_Welcome";
             this.LB_Welcome.Size = new System.Drawing.Size(225, 38);
             this.LB_Welcome.TabIndex = 5;
@@ -99,7 +105,8 @@
             // 
             // button2
             // 
-            this.button2.Location = new System.Drawing.Point(197, 206);
+            this.button2.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.button2.Location = new System.Drawing.Point(186, 201);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(75, 26);
             this.button2.TabIndex = 6;
@@ -109,8 +116,9 @@
             // 
             // checkBox1
             // 
+            this.checkBox1.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.checkBox1.AutoSize = true;
-            this.checkBox1.Location = new System.Drawing.Point(24, 173);
+            this.checkBox1.Location = new System.Drawing.Point(13, 168);
             this.checkBox1.Name = "checkBox1";
             this.checkBox1.Size = new System.Drawing.Size(115, 21);
             this.checkBox1.TabIndex = 7;
@@ -120,9 +128,10 @@
             // 
             // linkLabel1
             // 
+            this.linkLabel1.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.linkLabel1.AutoSize = true;
             this.linkLabel1.LinkColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(168)))), ((int)(((byte)(148)))));
-            this.linkLabel1.Location = new System.Drawing.Point(21, 211);
+            this.linkLabel1.Location = new System.Drawing.Point(10, 206);
             this.linkLabel1.Name = "linkLabel1";
             this.linkLabel1.Size = new System.Drawing.Size(63, 17);
             this.linkLabel1.TabIndex = 8;
@@ -133,7 +142,7 @@
             // LoginForm
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
-            this.ClientSize = new System.Drawing.Size(297, 244);
+            this.ClientSize = new System.Drawing.Size(274, 235);
             this.Controls.Add(this.linkLabel1);
             this.Controls.Add(this.checkBox1);
             this.Controls.Add(this.button2);

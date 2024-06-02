@@ -40,7 +40,7 @@
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(371, 3);
+            this.button1.Location = new System.Drawing.Point(350, 3);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(70, 25);
             this.button1.TabIndex = 3;
@@ -50,7 +50,7 @@
             // 
             // button2
             // 
-            this.button2.Location = new System.Drawing.Point(523, 3);
+            this.button2.Location = new System.Drawing.Point(502, 3);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(70, 25);
             this.button2.TabIndex = 4;
@@ -60,7 +60,7 @@
             // 
             // button3
             // 
-            this.button3.Location = new System.Drawing.Point(447, 3);
+            this.button3.Location = new System.Drawing.Point(426, 3);
             this.button3.Name = "button3";
             this.button3.Size = new System.Drawing.Size(70, 25);
             this.button3.TabIndex = 5;
@@ -74,11 +74,11 @@
             this.flowLayoutPanel1.Controls.Add(this.button3);
             this.flowLayoutPanel1.Controls.Add(this.button1);
             this.flowLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.flowLayoutPanel1.Location = new System.Drawing.Point(0, 336);
+            this.flowLayoutPanel1.Location = new System.Drawing.Point(0, 326);
             this.flowLayoutPanel1.Name = "flowLayoutPanel1";
             this.flowLayoutPanel1.Padding = new System.Windows.Forms.Padding(5, 0, 5, 5);
             this.flowLayoutPanel1.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.flowLayoutPanel1.Size = new System.Drawing.Size(606, 35);
+            this.flowLayoutPanel1.Size = new System.Drawing.Size(585, 35);
             this.flowLayoutPanel1.TabIndex = 6;
             // 
             // listView1
@@ -88,18 +88,19 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.listView1.FullRowSelect = true;
             this.listView1.HideSelection = false;
-            this.listView1.Location = new System.Drawing.Point(12, 55);
+            this.listView1.Location = new System.Drawing.Point(12, 38);
             this.listView1.Name = "listView1";
-            this.listView1.Size = new System.Drawing.Size(581, 257);
+            this.listView1.Size = new System.Drawing.Size(560, 264);
             this.listView1.TabIndex = 7;
             this.listView1.UseCompatibleStateImageBehavior = false;
             this.listView1.View = System.Windows.Forms.View.Details;
             // 
             // linkLabel1
             // 
+            this.linkLabel1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.linkLabel1.AutoEllipsis = true;
             this.linkLabel1.LinkColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(168)))), ((int)(((byte)(148)))));
-            this.linkLabel1.Location = new System.Drawing.Point(9, 315);
+            this.linkLabel1.Location = new System.Drawing.Point(9, 305);
             this.linkLabel1.Name = "linkLabel1";
             this.linkLabel1.Size = new System.Drawing.Size(179, 18);
             this.linkLabel1.TabIndex = 13;
@@ -112,7 +113,7 @@
             // PasswordManagerForm
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
-            this.ClientSize = new System.Drawing.Size(606, 371);
+            this.ClientSize = new System.Drawing.Size(585, 361);
             this.Controls.Add(this.listView1);
             this.Controls.Add(this.flowLayoutPanel1);
             this.Controls.Add(this.linkLabel1);
