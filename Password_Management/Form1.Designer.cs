@@ -118,9 +118,9 @@
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(77, 72);
+            this.button1.Location = new System.Drawing.Point(77, 75);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(82, 29);
+            this.button1.Size = new System.Drawing.Size(82, 25);
             this.button1.TabIndex = 2;
             this.button1.Text = "Start";
             this.button1.UseVisualStyleBackColor = true;
@@ -178,7 +178,9 @@
             this.Controls.Add(this.textBox1);
             this.Controls.Add(this.groupBox1);
             this.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MaximizeBox = false;
+            this.MinimizeBox = false;
             this.Name = "Form1";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
             this.Text = "Generate Password";

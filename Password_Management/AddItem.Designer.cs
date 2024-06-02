@@ -174,6 +174,8 @@
             this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.Name = "AddItem";
+            this.ShowIcon = false;
+            this.ShowInTaskbar = false;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
             this.Text = "Add Item";
             this.Load += new System.EventHandler(this.AddItem_Load);
