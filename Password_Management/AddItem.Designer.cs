@@ -40,11 +40,12 @@
             this.button1 = new System.Windows.Forms.Button();
             this.textBox4 = new System.Windows.Forms.TextBox();
             this.label6 = new System.Windows.Forms.Label();
+            this.linkLabel1 = new System.Windows.Forms.LinkLabel();
             this.SuspendLayout();
             // 
             // label1
             // 
-            this.label1.Location = new System.Drawing.Point(21, 53);
+            this.label1.Location = new System.Drawing.Point(21, 81);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(85, 17);
             this.label1.TabIndex = 0;
@@ -52,14 +53,14 @@
             // 
             // textBox1
             // 
-            this.textBox1.Location = new System.Drawing.Point(182, 50);
+            this.textBox1.Location = new System.Drawing.Point(182, 78);
             this.textBox1.Name = "textBox1";
             this.textBox1.Size = new System.Drawing.Size(163, 22);
             this.textBox1.TabIndex = 1;
             // 
             // textBox2
             // 
-            this.textBox2.Location = new System.Drawing.Point(182, 78);
+            this.textBox2.Location = new System.Drawing.Point(182, 106);
             this.textBox2.Name = "textBox2";
             this.textBox2.Size = new System.Drawing.Size(163, 22);
             this.textBox2.TabIndex = 3;
@@ -67,7 +68,7 @@
             // 
             // label2
             // 
-            this.label2.Location = new System.Drawing.Point(21, 79);
+            this.label2.Location = new System.Drawing.Point(21, 107);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(85, 17);
             this.label2.TabIndex = 2;
@@ -75,14 +76,14 @@
             // 
             // textBox3
             // 
-            this.textBox3.Location = new System.Drawing.Point(182, 106);
+            this.textBox3.Location = new System.Drawing.Point(182, 50);
             this.textBox3.Name = "textBox3";
             this.textBox3.Size = new System.Drawing.Size(163, 22);
             this.textBox3.TabIndex = 5;
             // 
             // label3
             // 
-            this.label3.Location = new System.Drawing.Point(21, 107);
+            this.label3.Location = new System.Drawing.Point(21, 51);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(85, 17);
             this.label3.TabIndex = 4;
@@ -90,7 +91,7 @@
             // 
             // label4
             // 
-            this.label4.Location = new System.Drawing.Point(21, 132);
+            this.label4.Location = new System.Drawing.Point(21, 145);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(85, 17);
             this.label4.TabIndex = 6;
@@ -98,9 +99,9 @@
             // 
             // richTextBox1
             // 
-            this.richTextBox1.Location = new System.Drawing.Point(24, 152);
+            this.richTextBox1.Location = new System.Drawing.Point(24, 165);
             this.richTextBox1.Name = "richTextBox1";
-            this.richTextBox1.Size = new System.Drawing.Size(321, 119);
+            this.richTextBox1.Size = new System.Drawing.Size(321, 106);
             this.richTextBox1.TabIndex = 7;
             this.richTextBox1.Text = "";
             // 
@@ -138,10 +139,29 @@
             this.label6.TabIndex = 10;
             this.label6.Text = "Item Name:";
             // 
+            // linkLabel1
+            // 
+            this.linkLabel1.AutoEllipsis = true;
+            this.linkLabel1.LinkColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(168)))), ((int)(((byte)(148)))));
+            this.linkLabel1.Location = new System.Drawing.Point(166, 131);
+            this.linkLabel1.Name = "linkLabel1";
+            this.linkLabel1.Size = new System.Drawing.Size(179, 18);
+            this.linkLabel1.TabIndex = 12;
+            this.linkLabel1.TabStop = true;
+            this.linkLabel1.Text = "Create Random Password";
+            this.linkLabel1.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.linkLabel1.UseMnemonic = false;
+            this.linkLabel1.MouseClick += new System.Windows.Forms.MouseEventHandler(this.linkLabel1_MouseClick);
+            // 
             // AddItem
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
             this.ClientSize = new System.Drawing.Size(367, 321);
+            this.Controls.Add(this.linkLabel1);
+            this.Controls.Add(this.textBox2);
+            this.Controls.Add(this.label2);
+            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.label1);
             this.Controls.Add(this.textBox4);
             this.Controls.Add(this.label6);
             this.Controls.Add(this.button1);
@@ -150,10 +170,6 @@
             this.Controls.Add(this.label4);
             this.Controls.Add(this.textBox3);
             this.Controls.Add(this.label3);
-            this.Controls.Add(this.textBox2);
-            this.Controls.Add(this.label2);
-            this.Controls.Add(this.textBox1);
-            this.Controls.Add(this.label1);
             this.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.MaximizeBox = false;
             this.MinimizeBox = false;
@@ -180,5 +196,6 @@
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.TextBox textBox4;
         private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.LinkLabel linkLabel1;
     }
 }

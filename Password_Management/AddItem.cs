@@ -95,5 +95,14 @@ namespace Generate_Password
             DialogResult= DialogResult.OK;
 
         }
+
+        private void linkLabel1_MouseClick(object sender, MouseEventArgs e)
+        {
+            if(e.Button== MouseButtons.Left)
+            {
+                Form1 form1 = new Form1();
+                form1.ShowDialog();
+            }    
+        }
     }
 }

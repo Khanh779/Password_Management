@@ -33,9 +33,26 @@ namespace Generate_Password
 
         private void TextBox1_LostFocus(object sender, EventArgs e)
         {
-            label3.Text = "Welcome! "+ textBox1.Text;
+            LB_Welcome.Text = GetTimeDay() + "\nWelcome " + textBox1.Text;
         }
 
+        public string GetTimeDay()
+        {
+            // Lấy thời gian hiện tại để xác định buổi trong ngày
+            DateTime time = DateTime.Now;
+            if (time.Hour >= 0 && time.Hour < 12)
+            {
+                return "Good morning!";
+            }
+            else if (time.Hour >= 12 && time.Hour < 18)
+            {
+                return "Good afternoon!";
+            }
+            else
+            {
+                return "Good evening!";
+            }
+        }
 
         private void checkBox1_CheckedChanged(object sender, EventArgs e)
         {
@@ -76,7 +93,7 @@ namespace Generate_Password
 
         private void LoginForm_Load(object sender, EventArgs e)
         {
-            foreach(var a in PasswordManager.Instance.GetUsers())
+            foreach (var a in PasswordManager.Instance.GetUsers())
             {
                 textBox1.AutoCompleteCustomSource.Add(a.UserName);
             }
@@ -86,8 +103,13 @@ namespace Generate_Password
         {
             if (e.Button == MouseButtons.Left)
             {
-                PasswordManager.Instance.AddUser(textBox1.Text, textBox2.Text);
-                MessageBox.Show("Add new user success!\nLet click login");
+                var createUserExist = PasswordManager.Instance.AddUser(textBox1.Text, textBox2.Text);
+                if (createUserExist == true)
+                    MessageBox.Show("Add new user success!\nPlease click login");
+                else
+                {
+                    MessageBox.Show("User name is exist!");
+                }
             }
         }
 
