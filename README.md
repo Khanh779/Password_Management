@@ -2,6 +2,7 @@
 
 ## About
 - Password management application help store, manage, and generate random passwords securely, including lowercase letters, uppercase letters, special characters, and numbers for enhanced security.
+- Support multi-languages.
 
 ## Features & Support
 |Feature|Support|
@@ -12,6 +13,18 @@
 |Special Characters| ✔️ |
 |Optional Length   | ✔️ |
 |Multi-User Support| ✔️ |
+
+## Languages
+|Language|Support|
+|------------------|----|
+|Vietnam | ✔️ |
+|Rusian | ✔️ |
+|English | ✔️ |
+|Chinese| ✔️ |
+|French| ✔️ |
+|German| ✔️ |
+|Korean| ✔️ |
+|Japanese| ✔️ |
 
 ## Installation
 - Require .Net Framework 4.7.2 or higher.
