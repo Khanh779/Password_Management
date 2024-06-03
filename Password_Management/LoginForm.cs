@@ -123,6 +123,7 @@ namespace Generate_Password
             }
 
             comboBox1.SelectedItem="English";
+
             SetLangFile();
 
             label1.Text = ChangeLanguage.GetValueFromIniFile("UserName");
