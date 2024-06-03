@@ -122,7 +122,7 @@ namespace Generate_Password
                 comboBox1.Items.Add(System.IO.Path.GetFileNameWithoutExtension(file));
             }
 
-            comboBox1.SelectedIndex = 0;
+            comboBox1.SelectedItem="English";
             SetLangFile();
 
             label1.Text = ChangeLanguage.GetValueFromIniFile("UserName");
