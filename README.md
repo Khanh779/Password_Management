@@ -20,11 +20,11 @@
 |Vietnam | ✔️ |
 |Rusian | ✔️ |
 |English | ✔️ |
-|Chinese| ✔️ |
 |French| ✔️ |
 |German| ✔️ |
 |Korean| ✔️ |
 |Japanese| ✔️ |
+|Chinese| ✔️ |
 
 ## Installation
 - Require .Net Framework 4.7.2 or higher.
