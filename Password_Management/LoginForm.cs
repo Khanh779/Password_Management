@@ -124,6 +124,13 @@ namespace Generate_Password
 
             comboBox1.SelectedIndex = 0;
             SetLangFile();
+
+            label1.Text = ChangeLanguage.GetValueFromIniFile("UserName");
+            label2.Text = ChangeLanguage.GetValueFromIniFile("Password");
+            checkBox1.Text = ChangeLanguage.GetValueFromIniFile("Hide_Password");
+            button1.Text = ChangeLanguage.GetValueFromIniFile("Login");
+            button2.Text = ChangeLanguage.GetValueFromIniFile("Cancel");
+            LB_Welcome.Text = GetTimeDay() + $"\n{ChangeLanguage.GetValueFromIniFile("Welcome")} " + textBox1.Text;
         }
 
 
@@ -141,8 +148,10 @@ namespace Generate_Password
 
         void SetLangFile()
         {
-            ChangeLanguage.ChangeLanguageFile(Application.StartupPath + "\\Lang\\" + comboBox1.Items[comboBox1.SelectedIndex].ToString() + ".lng");
+            ChangeLanguage.ChangeLanguageFile(Application.StartupPath + "\\Lang\\" + comboBox1.Items[comboBox1.SelectedIndex] + ".lng");
+
             Refresh();
+
         }
     }
 }
