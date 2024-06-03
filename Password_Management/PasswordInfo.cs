@@ -211,13 +211,13 @@ namespace Generate_Password
             switch (passwordSecureLevel)
             {
                 case PasswordSecureLevel.Danger:
-                    return "Danger";
+                    return ChangeLanguage.GetValueFromIniFile("Password_Level_Danger");
                 case PasswordSecureLevel.Normal:
-                    return "Normal";
+                    return ChangeLanguage.GetValueFromIniFile("Password_Level_Normal");
                 case PasswordSecureLevel.Safe:
-                    return "Safe";
+                    return ChangeLanguage.GetValueFromIniFile("Password_Level_Safe");
                 default:
-                    return "Unknown";
+                    return ChangeLanguage.GetValueFromIniFile("Unknown");
             }
         }
 
