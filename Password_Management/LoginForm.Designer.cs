@@ -60,6 +60,8 @@
             this.textBox1.Name = "textBox1";
             this.textBox1.Size = new System.Drawing.Size(208, 25);
             this.textBox1.TabIndex = 1;
+            this.textBox1.Text = "admin";
+            this.textBox1.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
             // 
             // textBox2
             // 
@@ -68,7 +70,8 @@
             this.textBox2.Name = "textBox2";
             this.textBox2.Size = new System.Drawing.Size(208, 25);
             this.textBox2.TabIndex = 3;
-            this.textBox2.Text = "password";
+            this.textBox2.Text = "admin";
+            this.textBox2.UseSystemPasswordChar = true;
             // 
             // label2
             // 
@@ -119,6 +122,8 @@
             // 
             this.checkBox1.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.checkBox1.AutoSize = true;
+            this.checkBox1.Checked = true;
+            this.checkBox1.CheckState = System.Windows.Forms.CheckState.Checked;
             this.checkBox1.Location = new System.Drawing.Point(184, 133);
             this.checkBox1.Name = "checkBox1";
             this.checkBox1.Size = new System.Drawing.Size(115, 21);
