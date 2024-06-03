@@ -1,6 +1,7 @@
 ﻿using Generate_Password.Enums;
 using System;
 using System.Drawing;
+using System.Reflection.Emit;
 using System.Windows.Forms;
 
 namespace Generate_Password
@@ -12,12 +13,19 @@ namespace Generate_Password
         {
             this.currentUser = currentUser;
             InitializeComponent();
+            Name = Properties.Resources.Change_Item ;
+            label1.Text = Properties.Resources.LB_UserName + ":";
+            label2.Text = Properties.Resources.LB_Password + ":";
+            label3.Text = Properties.Resources.Urls + ":";
+            label4.Text = Properties.Resources.Description + ":";
+            label5.Text = Properties.Resources.LB_SecureLevel + ":";
+            button1.Text = Properties.Resources.Btn_OK;
         }
 
         private void textBox2_TextChanged(object sender, EventArgs e)
         {
             var a = PaswordUtil.EvaluatePassword(textBox2.Text);
-            label5.Text = $"Pass length: {textBox2.Text.Length}, secure level: {CorverEnumToString(a)}";
+            label5.Text = $"{Properties.Resources.LB_PassLength}: {textBox2.Text.Length}, {Properties.Resources.LB_SecureLevel}: {CorverEnumToString(a)}";
 
             switch (a)
             {
@@ -40,13 +48,13 @@ namespace Generate_Password
             switch (passwordSecureLevel)
             {
                 case PasswordSecureLevel.Danger:
-                    return "Danger";
+                    return Properties.Resources.Password_Level_Danger;
                 case PasswordSecureLevel.Normal:
-                    return "Normal";
+                    return Properties.Resources.Password_Level_Normal;
                 case PasswordSecureLevel.Safe:
-                    return "Safe";
+                    return Properties.Resources.Password_Level_Safe;
                 default:
-                    return "Unknown";
+                    return Properties.Resources.Unknown;
             }
         }
 
@@ -61,7 +69,7 @@ namespace Generate_Password
             {
                 if (string.IsNullOrEmpty(textBox1.Text) || string.IsNullOrEmpty(textBox2.Text))
                 {
-                    MessageBox.Show("Please fill all fields");
+                    MessageBox.Show(Properties.Resources.Please_Fill_AllFields) ;
                     return;
                 }
 

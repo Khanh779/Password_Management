@@ -99,6 +99,11 @@ namespace Generate_Password
             return null;
         }
 
+        public bool CheckUserExist(string userName)
+        {
+            return users.ContainsKey(userName);
+        }
+
         public List<User> GetUsers()
         {
             return users.Values.ToList();

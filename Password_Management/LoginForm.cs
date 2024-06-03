@@ -25,7 +25,7 @@ namespace Generate_Password
 
         private void TextBox1_LostFocus(object sender, EventArgs e)
         {
-            LB_Welcome.Text = GetTimeDay() + "\nWelcome " + textBox1.Text;
+            LB_Welcome.Text = GetTimeDay() + $"\n{Properties.Resources.Welcome} " + textBox1.Text;
         }
 
         public string GetTimeDay()
@@ -34,15 +34,15 @@ namespace Generate_Password
             DateTime time = DateTime.Now;
             if (time.Hour >= 0 && time.Hour < 12)
             {
-                return "Good morning!";
+                return Properties.Resources.Good_Morning;
             }
             else if (time.Hour >= 12 && time.Hour < 18)
             {
-                return "Good afternoon!";
+                return Properties.Resources.Good_Afternoon;
             }
             else
             {
-                return "Good evening!";
+                return Properties.Resources.Good_Evening;
             }
         }
 
@@ -58,19 +58,45 @@ namespace Generate_Password
                 string userName = textBox1.Text;
                 string password = textBox2.Text;
 
-                User user = PasswordManager.Instance.AuthenticateUser(userName, password);
-
-                if (user != null)
+                if(userName != "" && password!="")
                 {
-                    MessageBox.Show("Login success!");
-                    // Mở form quản lý mật khẩu
-                    PasswordManagerForm passwordForm = new PasswordManagerForm(user);
-                    passwordForm.Show();
-                    this.Hide();
+                    if (PasswordManager.Instance.CheckUserExist(userName))
+                    {
+                        User user = PasswordManager.Instance.AuthenticateUser(userName, password);
+
+                        if (user != null)
+                        {
+                            MessageBox.Show(Properties.Resources.Message_Login_OK);
+                            PasswordManagerForm passwordForm = new PasswordManagerForm(user);
+                            passwordForm.Show();
+                            this.Hide();
+                        }
+                        else
+                        {
+                            MessageBox.Show(Properties.Resources.Message_Login_Fail);
+                        }
+                    }
+                    else
+                    {
+                        // hiện thông báo yes no để tạo user mới
+                        DialogResult dialogResult = MessageBox.Show(Properties.Resources.Message_User_Not_Exist, Properties.Resources.CreateNewUser, MessageBoxButtons.YesNo);
+                        if (dialogResult == DialogResult.Yes)
+                        {
+                            var createUserExist = PasswordManager.Instance.AddUser(userName, password);
+                            if (createUserExist == true)
+                            {
+                                MessageBox.Show(Properties.Resources.Add_User_OK);
+                            }
+                            else
+                            {
+                                MessageBox.Show(Properties.Resources.Message_User_Exist);
+                            }
+                        }
+                    }
                 }
                 else
                 {
-                    MessageBox.Show("User name or password is not correct!");
+                    MessageBox.Show(Properties.Resources.Message_Fill_UserName_Password);
                 }
             }
         }
@@ -91,26 +117,7 @@ namespace Generate_Password
             }
         }
 
-        private void linkLabel1_MouseClick(object sender, MouseEventArgs e)
-        {
-            if (e.Button == MouseButtons.Left)
-            {
-                if (textBox1.Text != "" && textBox2.Text != "")
-                {
-                    var createUserExist = PasswordManager.Instance.AddUser(textBox1.Text, textBox2.Text);
-                    if (createUserExist == true)
-                        MessageBox.Show("Add new user success!\nPlease click login");
-                    else
-                    {
-                        MessageBox.Show("User name is exist!");
-                    }
-                }
-                else
-                {
-                    MessageBox.Show("Please enter user name and password!");
-                }
-            }
-        }
+      
 
         protected override void OnFormClosing(FormClosingEventArgs e)
         {

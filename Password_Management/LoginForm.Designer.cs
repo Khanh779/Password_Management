@@ -37,14 +37,13 @@
             this.LB_Welcome = new System.Windows.Forms.Label();
             this.button2 = new System.Windows.Forms.Button();
             this.checkBox1 = new System.Windows.Forms.CheckBox();
-            this.linkLabel1 = new System.Windows.Forms.LinkLabel();
             this.SuspendLayout();
             // 
             // label1
             // 
             this.label1.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(10, 54);
+            this.label1.Location = new System.Drawing.Point(181, 19);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(77, 17);
             this.label1.TabIndex = 0;
@@ -55,17 +54,17 @@
             this.textBox1.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.textBox1.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.SuggestAppend;
             this.textBox1.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.CustomSource;
-            this.textBox1.Location = new System.Drawing.Point(13, 76);
+            this.textBox1.Location = new System.Drawing.Point(184, 41);
             this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(248, 25);
+            this.textBox1.Size = new System.Drawing.Size(208, 25);
             this.textBox1.TabIndex = 1;
             // 
             // textBox2
             // 
             this.textBox2.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.textBox2.Location = new System.Drawing.Point(13, 135);
+            this.textBox2.Location = new System.Drawing.Point(184, 100);
             this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(248, 25);
+            this.textBox2.Size = new System.Drawing.Size(208, 25);
             this.textBox2.TabIndex = 3;
             this.textBox2.Text = "password";
             // 
@@ -73,7 +72,7 @@
             // 
             this.label2.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(10, 113);
+            this.label2.Location = new System.Drawing.Point(181, 78);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(67, 17);
             this.label2.TabIndex = 2;
@@ -82,7 +81,7 @@
             // button1
             // 
             this.button1.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.button1.Location = new System.Drawing.Point(105, 201);
+            this.button1.Location = new System.Drawing.Point(236, 169);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(75, 26);
             this.button1.TabIndex = 4;
@@ -94,11 +93,11 @@
             // 
             this.LB_Welcome.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.LB_Welcome.AutoEllipsis = true;
-            this.LB_Welcome.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.LB_Welcome.Font = new System.Drawing.Font("Papyrus", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.LB_Welcome.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
-            this.LB_Welcome.Location = new System.Drawing.Point(24, 10);
+            this.LB_Welcome.Location = new System.Drawing.Point(12, 19);
             this.LB_Welcome.Name = "LB_Welcome";
-            this.LB_Welcome.Size = new System.Drawing.Size(225, 33);
+            this.LB_Welcome.Size = new System.Drawing.Size(151, 153);
             this.LB_Welcome.TabIndex = 5;
             this.LB_Welcome.Text = "Welcome!";
             this.LB_Welcome.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -106,7 +105,7 @@
             // button2
             // 
             this.button2.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.button2.Location = new System.Drawing.Point(186, 201);
+            this.button2.Location = new System.Drawing.Point(317, 169);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(75, 26);
             this.button2.TabIndex = 6;
@@ -118,7 +117,7 @@
             // 
             this.checkBox1.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.checkBox1.AutoSize = true;
-            this.checkBox1.Location = new System.Drawing.Point(13, 168);
+            this.checkBox1.Location = new System.Drawing.Point(184, 133);
             this.checkBox1.Name = "checkBox1";
             this.checkBox1.Size = new System.Drawing.Size(115, 21);
             this.checkBox1.TabIndex = 7;
@@ -126,24 +125,10 @@
             this.checkBox1.UseVisualStyleBackColor = true;
             this.checkBox1.CheckedChanged += new System.EventHandler(this.checkBox1_CheckedChanged);
             // 
-            // linkLabel1
-            // 
-            this.linkLabel1.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.linkLabel1.AutoSize = true;
-            this.linkLabel1.LinkColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(168)))), ((int)(((byte)(148)))));
-            this.linkLabel1.Location = new System.Drawing.Point(10, 206);
-            this.linkLabel1.Name = "linkLabel1";
-            this.linkLabel1.Size = new System.Drawing.Size(63, 17);
-            this.linkLabel1.TabIndex = 8;
-            this.linkLabel1.TabStop = true;
-            this.linkLabel1.Text = "Add User";
-            this.linkLabel1.MouseClick += new System.Windows.Forms.MouseEventHandler(this.linkLabel1_MouseClick);
-            // 
             // LoginForm
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
-            this.ClientSize = new System.Drawing.Size(274, 235);
-            this.Controls.Add(this.linkLabel1);
+            this.ClientSize = new System.Drawing.Size(407, 207);
             this.Controls.Add(this.checkBox1);
             this.Controls.Add(this.button2);
             this.Controls.Add(this.LB_Welcome);
@@ -175,6 +160,5 @@
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.CheckBox checkBox1;
         public System.Windows.Forms.TextBox textBox2;
-        private System.Windows.Forms.LinkLabel linkLabel1;
     }
 }

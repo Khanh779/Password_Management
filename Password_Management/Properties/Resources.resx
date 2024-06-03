@@ -46,7 +46,7 @@
     
     mimetype: application/x-microsoft.net.object.binary.base64
     value   : The object must be serialized with 
-            : System.Serialization.Formatters.Binary.BinaryFormatter
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
             : and then encoded with base64 encoding.
     
     mimetype: application/x-microsoft.net.object.soap.base64
@@ -60,6 +60,7 @@
             : and then encoded with base64 encoding.
     -->
   <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
     <xsd:element name="root" msdata:IsDataSet="true">
       <xsd:complexType>
         <xsd:choice maxOccurs="unbounded">
@@ -68,9 +69,10 @@
               <xsd:sequence>
                 <xsd:element name="value" type="xsd:string" minOccurs="0" />
               </xsd:sequence>
-              <xsd:attribute name="name" type="xsd:string" />
+              <xsd:attribute name="name" use="required" type="xsd:string" />
               <xsd:attribute name="type" type="xsd:string" />
               <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
             </xsd:complexType>
           </xsd:element>
           <xsd:element name="assembly">
@@ -85,9 +87,10 @@
                 <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
                 <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
               </xsd:sequence>
-              <xsd:attribute name="name" type="xsd:string" msdata:Ordinal="1" />
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
               <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
               <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
             </xsd:complexType>
           </xsd:element>
           <xsd:element name="resheader">
@@ -109,9 +112,147 @@
     <value>2.0</value>
   </resheader>
   <resheader name="reader">
-    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <resheader name="writer">
-    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
+  <data name="Add_Item_Title" xml:space="preserve">
+    <value>Add Item</value>
+  </data>
+  <data name="Add_User_OK" xml:space="preserve">
+    <value>Add new user success!\nPlease click login</value>
+  </data>
+  <data name="Btn_OK" xml:space="preserve">
+    <value>OK</value>
+  </data>
+  <data name="Cancel_Button" xml:space="preserve">
+    <value>Cancel</value>
+  </data>
+  <data name="CB_HidePassword" xml:space="preserve">
+    <value>Hide password</value>
+  </data>
+  <data name="Change_Item" xml:space="preserve">
+    <value>Change Item</value>
+  </data>
+  <data name="Change_password_information" xml:space="preserve">
+    <value>Change password information</value>
+  </data>
+  <data name="Copied" xml:space="preserve">
+    <value>Copied!</value>
+  </data>
+  <data name="Copy" xml:space="preserve">
+    <value>Copy</value>
+  </data>
+  <data name="CreateNewUser" xml:space="preserve">
+    <value>Create new user</value>
+  </data>
+  <data name="Create_RandomPass" xml:space="preserve">
+    <value>Create Random Password</value>
+  </data>
+  <data name="Delete_password_information" xml:space="preserve">
+    <value>Delete password information</value>
+  </data>
+  <data name="Description" xml:space="preserve">
+    <value>Description</value>
+  </data>
+  <data name="Generate_Btn" xml:space="preserve">
+    <value>Generate</value>
+  </data>
+  <data name="Good_Afternoon" xml:space="preserve">
+    <value>Good afternoon!</value>
+  </data>
+  <data name="Good_Evening" xml:space="preserve">
+    <value>Good evening!</value>
+  </data>
+  <data name="Good_Morning" xml:space="preserve">
+    <value>Good morning!</value>
+  </data>
+  <data name="Item_Name" xml:space="preserve">
+    <value>Item Name</value>
+  </data>
+  <data name="LB_PassLength" xml:space="preserve">
+    <value>Password length</value>
+  </data>
+  <data name="LB_Password" xml:space="preserve">
+    <value>Password</value>
+  </data>
+  <data name="LB_SecureLevel" xml:space="preserve">
+    <value>Secure level</value>
+  </data>
+  <data name="LB_UserName" xml:space="preserve">
+    <value>User Name</value>
+  </data>
+  <data name="Login_Button" xml:space="preserve">
+    <value>Login</value>
+  </data>
+  <data name="Message_Fill_UserName_Password" xml:space="preserve">
+    <value>Please enter user name and password!</value>
+  </data>
+  <data name="Message_Login_Fail" xml:space="preserve">
+    <value>User name or password is not correct!</value>
+  </data>
+  <data name="Message_Login_OK" xml:space="preserve">
+    <value>Login success!</value>
+  </data>
+  <data name="Message_select_to_show" xml:space="preserve">
+    <value>&lt;Select to show&gt;</value>
+  </data>
+  <data name="Message_User_Exist" xml:space="preserve">
+    <value>User name is exist!</value>
+  </data>
+  <data name="Message_User_Not_Exist" xml:space="preserve">
+    <value>User name is not exist!\nDo you want to create new user?</value>
+  </data>
+  <data name="Modification" xml:space="preserve">
+    <value>Modification</value>
+  </data>
+  <data name="Numeric_Chars" xml:space="preserve">
+    <value>Support Numeric Characters</value>
+  </data>
+  <data name="Option" xml:space="preserve">
+    <value>Option</value>
+  </data>
+  <data name="Options" xml:space="preserve">
+    <value>Options</value>
+  </data>
+  <data name="Password_information_changed" xml:space="preserve">
+    <value>Password information changed</value>
+  </data>
+  <data name="Password_Level_Danger" xml:space="preserve">
+    <value>Danger</value>
+  </data>
+  <data name="Password_Level_Normal" xml:space="preserve">
+    <value>Normal</value>
+  </data>
+  <data name="Password_Level_Safe" xml:space="preserve">
+    <value>Safe</value>
+  </data>
+  <data name="Pass_Length" xml:space="preserve">
+    <value>Length</value>
+  </data>
+  <data name="Please_Fill_AllFields" xml:space="preserve">
+    <value>Please fill all fields</value>
+  </data>
+  <data name="Special_Chars" xml:space="preserve">
+    <value>Support Special Characters</value>
+  </data>
+  <data name="Start_Btn" xml:space="preserve">
+    <value>Start</value>
+  </data>
+  <data name="Type_Chars" xml:space="preserve">
+    <value>Type Characters</value>
+  </data>
+  <data name="Unknown" xml:space="preserve">
+    <value>Unknown</value>
+  </data>
+  <data name="UpperCase_Chars" xml:space="preserve">
+    <value>Support Upper Case Characters</value>
+  </data>
+  <data name="Urls" xml:space="preserve">
+    <value>Urls</value>
+  </data>
+  <data name="Welcome" xml:space="preserve">
+    <value>Welcome</value>
+  </data>
 </root>
