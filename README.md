@@ -13,6 +13,18 @@
 |Optional Length   | ✔️ |
 |Multi-User Support| ✔️ |
 
+## Languages
+|Language|Support|
+|------------------|----|
+|Vietnam | ✔️ |
+|Rusian | ✔️ |
+|English | ✔️ |
+|Chinese| ✔️ |
+|French| ✔️ |
+|German| ✔️ |
+|Korean| ✔️ |
+|Japanese| ✔️ |
+
 ## Installation
 - Require .Net Framework 4.7.2 or higher.
 - Visual Studio and supporting tools to run the program.
