@@ -8,14 +8,15 @@ namespace Generate_Password
         public Form1()
         {
             InitializeComponent();
-            checkBox2.Text = Properties.Resources.UpperCase_Chars;
-            checkBox3.Text = Properties.Resources.Numeric_Chars;
-            checkBox4.Text = Properties.Resources.Special_Chars;
+            checkBox2.Text = ChangeLanguage.GetValueFromIniFile("UpperCase_Chars");
+            checkBox3.Text = ChangeLanguage.GetValueFromIniFile("Numeric_Chars");
+            checkBox4.Text = ChangeLanguage.GetValueFromIniFile("Special_Chars");
 
-            groupBox1.Text = Properties.Resources.Type_Chars+":";
-            groupBox2.Text = Properties.Resources.Options + ":";
+            groupBox1.Text = ChangeLanguage.GetValueFromIniFile("Type_Chars") + ":";
+            groupBox2.Text = ChangeLanguage.GetValueFromIniFile("Options") + ":";
 
-            button1.Text = Properties.Resources.Generate_Btn;
+            button1.Text = ChangeLanguage.GetValueFromIniFile("Generate_Btn");
+
 
         }
 
@@ -33,7 +34,8 @@ namespace Generate_Password
             if (e.Button == MouseButtons.Left)
             {
                 Clipboard.SetText(textBox1.Text);
-                label2.Text =  $"{Properties.Resources.Copied} ({textBox1.Text.Length}): " + textBox1.Text;
+                label2.Text = $"{ChangeLanguage.GetValueFromIniFile("Copied")} ({textBox1.Text.Length}): " + textBox1.Text;
+
                 label2.Visible = true;
             }
         }

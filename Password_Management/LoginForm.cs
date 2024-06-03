@@ -25,7 +25,7 @@ namespace Generate_Password
 
         private void TextBox1_LostFocus(object sender, EventArgs e)
         {
-            LB_Welcome.Text = GetTimeDay() + $"\n{Properties.Resources.Welcome} " + textBox1.Text;
+            LB_Welcome.Text = GetTimeDay() + $"\n{ChangeLanguage.GetValueFromIniFile("Welcome")} " + textBox1.Text;
         }
 
         public string GetTimeDay()
@@ -34,17 +34,18 @@ namespace Generate_Password
             DateTime time = DateTime.Now;
             if (time.Hour >= 0 && time.Hour < 12)
             {
-                return Properties.Resources.Good_Morning;
+                return ChangeLanguage.GetValueFromIniFile("Good_Morning");
             }
             else if (time.Hour >= 12 && time.Hour < 18)
             {
-                return Properties.Resources.Good_Afternoon;
+                return ChangeLanguage.GetValueFromIniFile("Good_Afternoon");
             }
             else
             {
-                return Properties.Resources.Good_Evening;
+                return ChangeLanguage.GetValueFromIniFile("Good_Evening");
             }
         }
+
 
         private void checkBox1_CheckedChanged(object sender, EventArgs e)
         {
@@ -58,7 +59,7 @@ namespace Generate_Password
                 string userName = textBox1.Text;
                 string password = textBox2.Text;
 
-                if(userName != "" && password!="")
+                if (userName != "" && password != "")
                 {
                     if (PasswordManager.Instance.CheckUserExist(userName))
                     {
@@ -66,37 +67,37 @@ namespace Generate_Password
 
                         if (user != null)
                         {
-                            MessageBox.Show(Properties.Resources.Message_Login_OK);
+                            MessageBox.Show(ChangeLanguage.GetValueFromIniFile("Message_Login_OK"));
                             PasswordManagerForm passwordForm = new PasswordManagerForm(user);
                             passwordForm.Show();
                             this.Hide();
                         }
                         else
                         {
-                            MessageBox.Show(Properties.Resources.Message_Login_Fail);
+                            MessageBox.Show(ChangeLanguage.GetValueFromIniFile("Message_Login_Fail"));
                         }
                     }
                     else
                     {
                         // hiện thông báo yes no để tạo user mới
-                        DialogResult dialogResult = MessageBox.Show(Properties.Resources.Message_User_Not_Exist, Properties.Resources.CreateNewUser, MessageBoxButtons.YesNo);
+                        DialogResult dialogResult = MessageBox.Show(ChangeLanguage.GetValueFromIniFile("Message_User_Not_Exist"), ChangeLanguage.GetValueFromIniFile("CreateNewUser"), MessageBoxButtons.YesNo);
                         if (dialogResult == DialogResult.Yes)
                         {
                             var createUserExist = PasswordManager.Instance.AddUser(userName, password);
                             if (createUserExist == true)
                             {
-                                MessageBox.Show(Properties.Resources.Add_User_OK);
+                                MessageBox.Show(ChangeLanguage.GetValueFromIniFile("Add_User_OK"));
                             }
                             else
                             {
-                                MessageBox.Show(Properties.Resources.Message_User_Exist);
+                                MessageBox.Show(ChangeLanguage.GetValueFromIniFile("Message_User_Exist"));
                             }
                         }
                     }
                 }
                 else
                 {
-                    MessageBox.Show(Properties.Resources.Message_Fill_UserName_Password);
+                    MessageBox.Show(ChangeLanguage.GetValueFromIniFile("Message_Fill_UserName_Password"));
                 }
             }
         }
@@ -115,14 +116,33 @@ namespace Generate_Password
             {
                 textBox1.AutoCompleteCustomSource.Add(a.UserName);
             }
+
+            foreach (var file in System.IO.Directory.GetFiles(Application.StartupPath + "\\Lang"))
+            {
+                comboBox1.Items.Add(System.IO.Path.GetFileNameWithoutExtension(file));
+            }
+
+            comboBox1.SelectedIndex = 0;
+            SetLangFile();
         }
 
-      
+
 
         protected override void OnFormClosing(FormClosingEventArgs e)
         {
             base.OnFormClosing(e);
             PasswordManager.Instance.SaveData();
+        }
+
+        private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            SetLangFile();
+        }
+
+        void SetLangFile()
+        {
+            ChangeLanguage.ChangeLanguageFile(Application.StartupPath + "\\Lang\\" + comboBox1.Items[comboBox1.SelectedIndex].ToString() + ".lng");
+            Refresh();
         }
     }
 }

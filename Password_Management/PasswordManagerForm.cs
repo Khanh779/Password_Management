@@ -21,13 +21,14 @@ namespace Generate_Password
 
         private void PasswordManager_Load(object sender, EventArgs e)
         {
-            listView1.Columns.Add(Properties.Resources.Item_Name, 100);
-            listView1.Columns.Add(Properties.Resources.LB_UserName, 100);
-            listView1.Columns.Add(Properties.Resources.LB_Password, 100);
-            listView1.Columns.Add(Properties.Resources.Urls, 100);
-            listView1.Columns.Add(Properties.Resources.Description, 100);
-            listView1.Columns.Add(Properties.Resources.LB_SecureLevel, 100);
-            listView1.Columns.Add(Properties.Resources.Modification, 100);
+            listView1.Columns.Add(ChangeLanguage.GetValueFromIniFile("Item_Name"), 100);
+            listView1.Columns.Add(ChangeLanguage.GetValueFromIniFile("LB_UserName"), 100);
+            listView1.Columns.Add(ChangeLanguage.GetValueFromIniFile("LB_Password"), 100);
+            listView1.Columns.Add(ChangeLanguage.GetValueFromIniFile("Urls"), 100);
+            listView1.Columns.Add(ChangeLanguage.GetValueFromIniFile("Description"), 100);
+            listView1.Columns.Add(ChangeLanguage.GetValueFromIniFile("LB_SecureLevel"), 100);
+            listView1.Columns.Add(ChangeLanguage.GetValueFromIniFile("Modification"), 100);
+
 
             listView1.ItemSelectionChanged += ListView1_ItemSelectionChanged;
 
@@ -39,7 +40,8 @@ namespace Generate_Password
         {
             for (int i = 0; i < listView1.Items.Count; i++)
             {
-                listView1.Items[i].SubItems[2].Text = Properties.Resources.Message_select_to_show;
+                listView1.Items[i].SubItems[2].Text = ChangeLanguage.GetValueFromIniFile("Message_select_to_show")
+;
             }
             if (listView1.SelectedItems.Count > 0)
             {
@@ -63,7 +65,8 @@ namespace Generate_Password
                     {
                             a.ItemName,
                             a.UserName,
-                            Properties.Resources.Message_select_to_show,
+                            ChangeLanguage.GetValueFromIniFile("Message_select_to_show")
+,
                             a.URL,
                             a.Note,
                             PaswordUtil.ConvertEnumsToSecureString(PaswordUtil.EvaluatePassword(a.Password)),
@@ -108,7 +111,7 @@ namespace Generate_Password
                     {
                         //currentUser.Passwords.RemoveAt(item.Index);
                         PasswordManager.Instance.DeletePassword(currentUser.UserName, item.Index);
-                        MessageBox.Show(Properties.Resources.Password_information_changed, Application.ProductName + " - " + Properties.Resources.Delete_password_information, MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        MessageBox.Show(ChangeLanguage.GetValueFromIniFile("Password_information_changed"), Application.ProductName + " - " + ChangeLanguage.GetValueFromIniFile("Delete_password_information"), MessageBoxButtons.OK, MessageBoxIcon.Information);
 
                     }
                     PasswordManager.Instance.SaveData();
@@ -127,7 +130,7 @@ namespace Generate_Password
                     if (addItem.ShowDialog() == DialogResult.OK)
                     {
                         PasswordManager.Instance.SaveData();
-                        MessageBox.Show(Properties.Resources.Password_information_changed, Application.ProductName + " - " + Properties.Resources.Change_password_information, MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        MessageBox.Show(ChangeLanguage.GetValueFromIniFile("Password_information_changed"), Application.ProductName + " - " + ChangeLanguage.GetValueFromIniFile("Change_password_information"), MessageBoxButtons.OK, MessageBoxIcon.Information);
 
                     }
                     LoadData();
