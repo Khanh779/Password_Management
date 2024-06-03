@@ -150,6 +150,13 @@ namespace Generate_Password
         {
             ChangeLanguage.ChangeLanguageFile(Application.StartupPath + "\\Lang\\" + comboBox1.Items[comboBox1.SelectedIndex] + ".lng");
 
+            label1.Text = ChangeLanguage.GetValueFromIniFile("UserName");
+            label2.Text = ChangeLanguage.GetValueFromIniFile("Password");
+            checkBox1.Text = ChangeLanguage.GetValueFromIniFile("Hide_Password");
+            button1.Text = ChangeLanguage.GetValueFromIniFile("Login");
+            button2.Text = ChangeLanguage.GetValueFromIniFile("Cancel");
+            LB_Welcome.Text = GetTimeDay() + $"\n{ChangeLanguage.GetValueFromIniFile("Welcome")} " + textBox1.Text;
+
             Refresh();
 
         }
