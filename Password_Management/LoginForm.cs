@@ -25,7 +25,7 @@ namespace Generate_Password
 
         private void TextBox1_LostFocus(object sender, EventArgs e)
         {
-            LB_Welcome.Text = GetTimeDay() + $"\n{ChangeLanguage.GetValueFromIniFile("Welcome")} " + textBox1.Text;
+           
   
         }
 
@@ -161,7 +161,7 @@ namespace Generate_Password
 
         private void textBox1_TextChanged(object sender, EventArgs e)
         {
-
+            LB_Welcome.Text = GetTimeDay() + $"\n{ChangeLanguage.GetValueFromIniFile("Welcome")} " + textBox1.Text;
         }
     }
 }

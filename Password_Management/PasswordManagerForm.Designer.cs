@@ -40,6 +40,7 @@
             // 
             // button1
             // 
+            this.button1.AutoEllipsis = true;
             this.button1.Location = new System.Drawing.Point(350, 3);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(70, 25);
@@ -50,6 +51,7 @@
             // 
             // button2
             // 
+            this.button2.AutoEllipsis = true;
             this.button2.Location = new System.Drawing.Point(502, 3);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(70, 25);
@@ -60,6 +62,7 @@
             // 
             // button3
             // 
+            this.button3.AutoEllipsis = true;
             this.button3.Location = new System.Drawing.Point(426, 3);
             this.button3.Name = "button3";
             this.button3.Size = new System.Drawing.Size(70, 25);
