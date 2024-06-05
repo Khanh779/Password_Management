@@ -92,7 +92,7 @@
             this.button1.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.button1.AutoEllipsis = true;
             this.button1.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
-            this.button1.Location = new System.Drawing.Point(223, 169);
+            this.button1.Location = new System.Drawing.Point(211, 169);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(89, 26);
             this.button1.TabIndex = 4;
@@ -118,9 +118,9 @@
             this.button2.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.button2.AutoEllipsis = true;
             this.button2.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
-            this.button2.Location = new System.Drawing.Point(318, 169);
+            this.button2.Location = new System.Drawing.Point(306, 169);
             this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(75, 26);
+            this.button2.Size = new System.Drawing.Size(87, 26);
             this.button2.TabIndex = 6;
             this.button2.Text = "Cancel";
             this.button2.UseVisualStyleBackColor = true;
@@ -146,7 +146,7 @@
             this.label3.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label3.AutoEllipsis = true;
             this.label3.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
-            this.label3.Location = new System.Drawing.Point(15, 178);
+            this.label3.Location = new System.Drawing.Point(8, 178);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(68, 17);
             this.label3.TabIndex = 8;
@@ -158,9 +158,9 @@
             this.comboBox1.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.comboBox1.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
             this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Location = new System.Drawing.Point(88, 175);
+            this.comboBox1.Location = new System.Drawing.Point(82, 175);
             this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(112, 25);
+            this.comboBox1.Size = new System.Drawing.Size(98, 25);
             this.comboBox1.TabIndex = 9;
             this.comboBox1.SelectedIndexChanged += new System.EventHandler(this.comboBox1_SelectedIndexChanged);
             // 
