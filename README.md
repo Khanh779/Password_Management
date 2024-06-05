@@ -3,6 +3,7 @@
 ## About
 - Password management application help store, manage, and generate random passwords securely, including lowercase letters, uppercase letters, special characters, and numbers for enhanced security.
 - Support multi-languages.
+- Stores a list of password information as an encrypted binary file.
 
 ## Features & Support
 |Feature|Support|
