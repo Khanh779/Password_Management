@@ -29,8 +29,14 @@ namespace Generate_Password
             listView1.Columns.Add(ChangeLanguage.GetValueFromIniFile("LB_SecureLevel"), 100);
             listView1.Columns.Add(ChangeLanguage.GetValueFromIniFile("Modification"), 100);
 
+            linkLabel1.Text= ChangeLanguage.GetValueFromIniFile("Create_RandomPass");
+            button1.Text = ChangeLanguage.GetValueFromIniFile("Add");
+            button2.Text = ChangeLanguage.GetValueFromIniFile("Delete");
+            button3.Text = ChangeLanguage.GetValueFromIniFile("Change");
+
 
             listView1.ItemSelectionChanged += ListView1_ItemSelectionChanged;
+
 
             LoadData();
 

@@ -20,12 +20,14 @@ namespace Generate_Password
         {
             InitializeComponent();
             loginForm = this;
+            Text = ChangeLanguage.GetValueFromIniFile("Login");
             textBox1.LostFocus += TextBox1_LostFocus;
         }
 
         private void TextBox1_LostFocus(object sender, EventArgs e)
         {
             LB_Welcome.Text = GetTimeDay() + $"\n{ChangeLanguage.GetValueFromIniFile("Welcome")} " + textBox1.Text;
+  
         }
 
         public string GetTimeDay()
