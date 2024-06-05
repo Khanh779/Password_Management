@@ -127,13 +127,7 @@ namespace Generate_Password
 
             SetLangFile();
 
-            label1.Text = ChangeLanguage.GetValueFromIniFile("UserName");
-            label2.Text = ChangeLanguage.GetValueFromIniFile("Password");
-            checkBox1.Text = ChangeLanguage.GetValueFromIniFile("Hide_Password");
-            button1.Text = ChangeLanguage.GetValueFromIniFile("Login");
-            Text = ChangeLanguage.GetValueFromIniFile("Login");
-            button2.Text = ChangeLanguage.GetValueFromIniFile("Cancel");
-            LB_Welcome.Text = GetTimeDay() + $"\n{ChangeLanguage.GetValueFromIniFile("Welcome")} " + textBox1.Text;
+       
         }
 
 
@@ -157,6 +151,7 @@ namespace Generate_Password
             label2.Text = ChangeLanguage.GetValueFromIniFile("Password");
             checkBox1.Text = ChangeLanguage.GetValueFromIniFile("Hide_Password");
             button1.Text = ChangeLanguage.GetValueFromIniFile("Login");
+            Text = ChangeLanguage.GetValueFromIniFile("Login");
             button2.Text = ChangeLanguage.GetValueFromIniFile("Cancel");
             LB_Welcome.Text = GetTimeDay() + $"\n{ChangeLanguage.GetValueFromIniFile("Welcome")} " + textBox1.Text;
 
