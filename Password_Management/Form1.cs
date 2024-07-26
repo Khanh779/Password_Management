@@ -25,16 +25,18 @@ namespace Generate_Password
             if (e.Button == MouseButtons.Left)
             {
                 int length = Convert.ToInt32(numericUpDown1.Value);
-                textBox1.Text = PasswordGenerator.GeneratePassword(length, checkBox2.Checked, checkBox3.Checked, checkBox4.Checked, 1);
+                textBox1.Text = PasswordGenerator.GeneratePassword(length, checkBox2.Checked, checkBox3.Checked, checkBox4.Checked, 1, textBox2.Text);
             }
         }
+
+        int timeRefresher = 0;
 
         private void button2_MouseClick(object sender, MouseEventArgs e)
         {
             if (e.Button == MouseButtons.Left)
             {
                 Clipboard.SetText(textBox1.Text);
-                label2.Text = $"{ChangeLanguage.GetValueFromIniFile("Copied")} ({textBox1.Text.Length}): " + textBox1.Text;
+                label2.Text = $"{ChangeLanguage.GetValueFromIniFile("Copied")} ({textBox1.Text.Length}): " + timeRefresher++;
 
                 label2.Visible = true;
             }

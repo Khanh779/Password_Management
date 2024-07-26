@@ -8,11 +8,16 @@ namespace Generate_Password
         private const string LowercaseChars = "abcdefghijklmnopqrstuvwxyz";
         private const string UppercaseChars = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
         private const string NumericChars = "0123456789";
-        private const string SpecialChars = "!@#$%^&*()-_+=";
+        private static string SpecialChars = "!@#$%^&*()-_+=";
 
 
-        public static string GeneratePassword(int length, bool isUppercaseChars, bool includeNumbers, bool includeSpecialChars, int method_type = 0)
+        public static string GeneratePassword(int length, bool isUppercaseChars, bool includeNumbers, bool includeSpecialChars, int method_type = 0, string specialChars="")
         {
+            if(specialChars != "")
+            {
+                SpecialChars = specialChars;
+            }
+
             string chars = LowercaseChars + (isUppercaseChars ? UppercaseChars : "");
             if (includeNumbers)
                 chars += NumericChars;

@@ -144,14 +144,22 @@ namespace Generate_Password
             }
         }
 
+        Form1 form1 = new Form1();
+
         private void linkLabel1_MouseClick(object sender, MouseEventArgs e)
         {
             if (e.Button == MouseButtons.Left)
             {
-                Form1 form1 = new Form1();
+             
                 form1.StartPosition = FormStartPosition.CenterScreen;
                 form1.Show();
+                form1.BringToFront();
             }
+        }
+
+        private void linkLabel1_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+
         }
     }
 }
